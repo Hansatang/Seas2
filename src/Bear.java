@@ -1,25 +1,31 @@
 public class Bear implements Runnable
 {
+  private String name;
+
+  public Bear(String name)
+  {
+    this.name = name;
+  }
+
+  public String getName()
+  {
+    return name;
+  }
 
   @Override public void run()
   {
     {
-      try
+      while (true)
       {
-        Thread.sleep(5000);
-      }
-      catch (InterruptedException e)
-      {
-        Thread.currentThread().interrupt();
-      }
-
-      if (Thread.interrupted())
-      {
-        System.out.println("Feck");
-      }
-      else
-      {
-        System.out.println("yaw");
+        try
+        {
+          Thread.sleep(1000);
+          System.out.println(name + " Lazy wake");
+        }
+        catch (InterruptedException e)
+        {
+          System.out.println(name + " Angry wake");
+        }
       }
     }
   }

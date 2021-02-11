@@ -1,34 +1,42 @@
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Random;
 
 public class PokeMan implements Runnable
 {
-  private Thread bearThread;
 
-  public PokeMan(Thread bearThread)
+  private ArrayList<Thread> list;
+
+  public PokeMan(ArrayList<Thread> list)
   {
-    this.bearThread = bearThread;
+    this.list = list;
   }
 
   @Override public void run()
   {
-    bearThread.start();
-    Scanner input = new Scanner(System.in);
-
-    System.out.println("Do you want to poke a bear ?");
-    String answer = input.nextLine();
-
-    try
+    while (true)
     {
-
-      if (answer.equals("yes"))
+      try
       {
-        bearThread.interrupt();
+        Thread.sleep(2000);
+      }
+      catch (InterruptedException e)
+      {
+        e.printStackTrace();
+      }
+      Random r = new Random();
+
+      int l = r.nextInt(list.size());
+      list.get(l).interrupt();
+      for (int i = 0; i < list.size(); i++)
+      {
+        if (i != l)
+        {
+          if (!list.get(i).isInterrupted())
+          {
+            list.get(i).interrupt();
+          }
+        }
       }
     }
-    finally
-    {
-      Thread.currentThread().interrupt();
-    }
-
   }
 }
