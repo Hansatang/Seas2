@@ -1,3 +1,5 @@
+package L1;
+
 public class CounterIncrement implements Runnable
 {
   private Counter counter;
@@ -12,7 +14,7 @@ public class CounterIncrement implements Runnable
     for (int i = 0; i < 100000; i++)
     {
       counter.inc();
-      System.out.println(" finished: Counter.value = " + counter.value());
+      System.out.println(" finished: L1.Counter.value = " + counter.value());
     }
   }
 }

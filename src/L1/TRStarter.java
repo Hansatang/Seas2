@@ -1,3 +1,5 @@
+package L1;
+
 public class TRStarter
 {
   public static void main(String[] args)

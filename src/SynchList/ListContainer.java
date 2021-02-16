@@ -9,7 +9,7 @@ public class ListContainer
 
   public ListContainer()
   {
-    this.integerList = new ArrayList<Integer>();
+    this.integerList = new ArrayList<>();
   }
 
   public synchronized void add(int integer){

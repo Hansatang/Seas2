@@ -1,3 +1,5 @@
+package L1;
+
 import java.util.Random;
 
 public class Rabbit implements Runnable

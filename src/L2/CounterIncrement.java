@@ -18,7 +18,7 @@ public class CounterIncrement implements Runnable
       counter.inc();
 
     }
-    System.out.println(name+" finished: Counter.value = " + counter.value());
+    System.out.println(name+" finished: L1.Counter.value = " + counter.value());
   }
 }
 

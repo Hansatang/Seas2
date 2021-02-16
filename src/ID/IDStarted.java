@@ -13,19 +13,19 @@ public class IDStarted
     Thread t2 = new Thread(new CounterDec("DecCegla", c, 200));
     Thread t3 = new Thread(new CounterDec("DecMike", c, 200));
 
-
     List<Thread> threadList = new ArrayList<>();
     threadList.add(t0);
     threadList.add(t1);
     threadList.add(t2);
     threadList.add(t3);
 
-      t0.start();
-      t1.start();
-      t2.start();
-      t3.start();
+    t0.start();
+    t1.start();
+    t2.start();
+    t3.start();
 
-    for(Thread t : threadList) {
+    for (Thread t : threadList)
+    {
       try
       {
         t.join();
@@ -35,8 +35,7 @@ public class IDStarted
         e.printStackTrace();
       }
     }
-    System.out.print("All the threads are completed by now "+c.value());
-
+    System.out.print("All the threads are completed by now " + c.value());
 
   }
 }

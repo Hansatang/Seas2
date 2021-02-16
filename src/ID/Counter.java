@@ -33,7 +33,6 @@ public class Counter
 
   public synchronized void dec()
   {
-
     while (value <= min)
     {
       try

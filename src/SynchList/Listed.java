@@ -20,6 +20,6 @@ public class Listed implements Runnable
 
       counter.add(i);
     }
-    System.out.println(name+" finished: Counter.value = " + counter.getLength());
+    System.out.println(name+" finished: L1.Counter.value = " + counter.getLength());
   }
 }

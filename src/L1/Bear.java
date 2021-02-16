@@ -1,3 +1,5 @@
+package L1;
+
 public class Bear implements Runnable
 {
   private String name;

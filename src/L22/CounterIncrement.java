@@ -14,9 +14,9 @@ public class CounterIncrement implements Runnable
     for (int i = 0; i < 1000000; i++)
     {
       counter.inc1();
-      System.out.println(" finished: Counter.value1 = " + counter.value1());
+      System.out.println(" finished: L1.Counter.value1 = " + counter.value1());
       counter.inc2();
-      System.out.println(" finished: Counter.value2 = " + counter.value2());
+      System.out.println(" finished: L1.Counter.value2 = " + counter.value2());
     }
   }
 }

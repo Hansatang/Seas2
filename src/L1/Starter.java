@@ -1,4 +1,5 @@
-import java.awt.*;
+package L1;
+
 import java.util.ArrayList;
 
 public class Starter

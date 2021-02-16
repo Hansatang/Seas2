@@ -36,6 +36,7 @@ public class Thermo implements Runnable
     while (true)
     {
       temperature( 2, 0, 6);
+
       try
       {
         Thread.sleep(1000);

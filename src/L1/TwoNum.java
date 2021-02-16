@@ -1,3 +1,5 @@
+package L1;
+
 public class TwoNum implements Runnable
 {
   private int n, t;
